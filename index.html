@@ -20,6 +20,7 @@
 						<tr>
 							<td>
 								<form>
+									<legend>l'ombre:</legend>
 									<legend>décalage X : {{xdec}}</legend>
 									<input type="range" ng-model="xdec" ng-init="xdec=5" max="80" min="-80">
 
@@ -29,9 +30,15 @@
 									<label>flou : {{flou}}</label>
 									<input type="range" ng-model="flou" ng-init="flou=5" max="100" min="0">
 
+									<label>distance avant flou : {{Dflou}}</label>
+									<input type="range" ng-model="Dflou" ng-init="Dflou=1" max="100" min="0">
+
+									<label>ombre a l'interieur: </label>
+									<input type="checkbox" ng-model="inset" ng-true-value="inset" ng-false-value="" />
+
 									<label>couleur de l'ombre: {{color}}</label>
 									<input type="color" ng-model="color" ng-init="color='#aaaaaa'" />
-
+									<legend>le carré:</legend>
 									<label>couleur du carré: {{colord}}</label>
 									<input type="color" ng-model="colord" ng-init="colord='#aefb98'" />
 
@@ -40,7 +47,7 @@
 								</form>
 							</td>
 							<td>
-								<div class="exemple" style="box-shadow: {{xdec}}px {{ydec}}px {{flou}}px 0px {{color}};
+								<div class="exemple" style="box-shadow: {{inset}} {{xdec}}px {{ydec}}px {{flou}}px {{Dflou}}px {{color}};
 															background-color: {{colord}}; border-radius: {{rad}}%;" >
 								</div>
 							</td>
@@ -49,7 +56,7 @@
 							<td colspan="2" ><p>récuperez le code ici:</p>
 								<code>
 									.exemple{<br/>
-										box-shadow: {{xdec}}px {{ydec}}px {{flou}}px 0px {{color}};<br/>
+										box-shadow: {{inset}} {{xdec}}px {{ydec}}px {{flou}}px {{Dflou}}px {{color}};<br/>
 										background-color: {{colord}};<br/>
 										border-radius: {{rad}}%;<br/>
 									}
@@ -63,13 +70,33 @@
 						<tr>
 							<td>
 								<form>
-									<p>couou</p>
+									<legend>l'ombre</legend>
+									<label>décalage X : {{x_dec}}</label>
+									<input type="range" ng-model="x_dec" ng-init="x_dec=10" max="80" min="-80">
+									<label>décalage Y : {{y_dec}}</label>
+									<input type="range" ng-model="y_dec" ng-init="y_dec=10" max="80" min="-80">
+									<label>flou : {{blur}}</label>
+									<input type="range" ng-model="blur" ng-init="blur=10" max="90" min="0">
+									<label>couleur de l'ombre: {{TOcolor}}</label>
+									<input type="color" ng-model="TOcolor" ng-init="TOcolor='#4b43f3'" />
+									<legend>le texte</legend>
+									<label>couleur du texte: {{Tcolor}}</label>
+									<input type="color" ng-model="Tcolor" ng-init="Tcolor='#9f23d4'" />
 								</form>
 							</td>
 							<td>
-									<p>coucou</p>
+								<p class="exemple" id="exemple2" style="text-shadow: {{x_dec}}px {{y_dec}}px {{blur}}px {{TOcolor}}; color: {{Tcolor}};" >Texte d'exemple
+								</p>
 							</td>
 						</tr>
+						<td colspan="2" ><p>récuperez le code ici:</p>
+								<code>
+									.exemple{<br/>
+										text-shadow: {{x_dec}}px {{y_dec}}px {{blur}}px {{TOcolor}};<br/>
+										color: {{Tcolor}};
+									}
+								</code>
+							</td>
 					</table>
 				</div>
 				<div id="tabs-3">

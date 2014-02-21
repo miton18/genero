@@ -23,8 +23,15 @@ header p{
 .exemple{
 	margin: 20px auto 20px auto;
 	background-color: red;
-	width: 100px;
-	height: 100px;
+	width: 180px;
+	height: 180px;
+}
+#exemple2{
+	margin-top: 40px;
+	background-color: white;
+	width: 80%;
+	font-size: 3em;
+	text-align: center;
 }
 input{
 	width: 100%;
