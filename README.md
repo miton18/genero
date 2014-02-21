@@ -1,6 +1,6 @@
 #########################################################
 
-généro est un outil de devellopement ...en devellopement
+généro est un outil de developpement ...en developpement
 
 createur: Rémi Collignon 
 
