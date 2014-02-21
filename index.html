@@ -1,13 +1,13 @@
 <html ng-app>
 	<head>
+		<title># GENERO #</title>
 		<link rel="stylesheet" type="text/css" href="style.css" />
 		<link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css" />
 		<meta charset="utf-8" />
-		<title># GENERO #</title>
 	</head>
 	<body>
 		<header>
-			<p>Générateur de petits trucs CSS bien pratique...</p>
+			<p>GENERO: Générateur de petits trucs CSS bien pratique...</p>
 		</header>
 		<div id="tabs">
 			<ul>
@@ -22,22 +22,27 @@
 								<form>
 									<legend>décalage X : {{xdec}}</legend>
 									<input type="range" ng-model="xdec" ng-init="xdec=5" max="80" min="-80">
+
 									<legend>décalage Y : {{ydec}}</legend>
 									<input type="range" ng-model="ydec" ng-init="ydec=5" max="80" min="-80">
+
 									<label>flou : {{flou}}</label>
 									<input type="range" ng-model="flou" ng-init="flou=5" max="100" min="0">
+
 									<label>couleur de l'ombre: {{color}}</label>
 									<input type="color" ng-model="color" ng-init="color='#aaaaaa'" />
 
 									<label>couleur du carré: {{colord}}</label>
 									<input type="color" ng-model="colord" ng-init="colord='#aefb98'" />
+
 									<legend>arrondis des bords : {{rad}}</legend>
 									<input type="range" ng-model="rad" ng-init="rad=10" max="50" min="0">
-
 								</form>
 							</td>
 							<td>
-								<div class="exemple" style="box-shadow: {{xdec}}px {{ydec}}px {{flou}}px 0px {{color}}; background-color: {{colord}}; border-radius: {{rad}}%;" ></div>
+								<div class="exemple" style="box-shadow: {{xdec}}px {{ydec}}px {{flou}}px 0px {{color}};
+															background-color: {{colord}}; border-radius: {{rad}}%;" >
+								</div>
 							</td>
 						</tr>
 						<tr>
@@ -83,7 +88,9 @@
 				</div>
 			</div>
 
-		
+		<footer>
+			appli de Rémi collignon: <a href="https://github.com/miton18/genero" target="_TOP" >github</a>  <a href="http://remi.rcdinfo.fr" target="_TOP" >l'auteur</a>
+		</footer>
 		<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.12/angular.min.js"></script>
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
 		<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
