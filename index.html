@@ -15,7 +15,7 @@
 				<li><a href="#tabs-2">Text-shadow</a></li>
 				<li><a href="#tabs-3">Dégradés</a></li>
 			</ul>
-				<div id="tabs-1">
+				<div class="ong" id="tabs-1">
 					<table>
 						<tr>
 							<td>
@@ -65,7 +65,7 @@
 						</tr>
 					</table>
 				</div>
-				<div id="tabs-2">
+				<div class="ong" id="tabs-2">
 					<table>
 						<tr>
 							<td>
@@ -99,16 +99,28 @@
 							</td>
 					</table>
 				</div>
-				<div id="tabs-3">
+				<div class="ong" id="tabs-3">
 			    	<table>
 						<tr>
 							<td>
 								<form>
-									<p>couou</p>
+									<label>orientation: </label><br/>
+										<span>vers le haut</span>
+										<input type="radio" name="or" ng-model="dir" value="to top" ng-init="dir='to top'" ><br/>
+										<span>vers le bas</span>
+										<input type="radio" name="or" ng-model="dir" value="to bottom"><br/>
+										<span>vers la gauche</span>
+										<input type="radio" name="or" ng-model="dir" value="to left"><br/>
+										<span>vers la droite</span>
+										<input type="radio" name="or"ng-model="dir" value="to right"><br/>
+										<label>couleur de debut: {{dcolor}}</label>
+										<input type="color" ng-model="dcolor" ng-init="dcolor='#9f23d4'" />
+										<label>couleur de fin: {{fcolor}}</label>
+										<input type="color" ng-model="fcolor" ng-init="fcolor='#2a3c5f'" />
 								</form>
 							</td>
 							<td>
-									<p>coucou</p>
+									<div class="exemple" id="exemple3" style="background-image:linear-gradient({{dir}}, {{dcolor}}, {{fcolor}});" ></div>
 							</td>
 						</tr>
 					</table>
