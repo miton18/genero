@@ -3,7 +3,10 @@
 		<title># GENERO #</title>
 		<link rel="stylesheet" type="text/css" href="style.css" />
 		<link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css" />
+		<link rel='stylesheet' href='spectrum.css' />
 		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg" href="fav.jpg" />
+		<!--[if IE]><link rel="shortcut icon" type="image/x-icon" href="fav.jpg" /><![endif]-->
 	</head>
 	<body>
 		<header>
@@ -37,10 +40,10 @@
 									<input type="checkbox" ng-model="inset" ng-true-value="inset" ng-false-value="" />
 
 									<label>couleur de l'ombre: {{color}}</label>
-									<input type="color" ng-model="color" ng-init="color='#aaaaaa'" />
+									<input class="color" type="text" ng-model="color" ng-init="color='#aaaaaa'" />
 									<legend>le carré:</legend>
 									<label>couleur du carré: {{colord}}</label>
-									<input type="color" ng-model="colord" ng-init="colord='#aefb98'" />
+									<input class="color" type="text" ng-model="colord" ng-init="colord='#aefb98'" />
 
 									<legend>arrondis des bords : {{rad}}</legend>
 									<input type="range" ng-model="rad" ng-init="rad=10" max="50" min="0">
@@ -78,10 +81,10 @@
 									<label>flou : {{blur}}</label>
 									<input type="range" ng-model="blur" ng-init="blur=10" max="90" min="0">
 									<label>couleur de l'ombre: {{TOcolor}}</label>
-									<input type="color" ng-model="TOcolor" ng-init="TOcolor='#4b43f3'" />
+									<input class="color" type="text" ng-model="TOcolor" ng-init="TOcolor='#4b43f3'" />
 									<legend>le texte</legend>
 									<label>couleur du texte: {{Tcolor}}</label>
-									<input type="color" ng-model="Tcolor" ng-init="Tcolor='#9f23d4'" />
+									<input class="color" type="text" ng-model="Tcolor" ng-init="Tcolor='#9f23d4'" />
 								</form>
 							</td>
 							<td>
@@ -93,7 +96,7 @@
 								<code>
 									.exemple{<br/>
 										text-shadow: {{x_dec}}px {{y_dec}}px {{blur}}px {{TOcolor}};<br/>
-										color: {{Tcolor}};
+										color: {{Tcolor}};<br/>
 									}
 								</code>
 							</td>
@@ -114,13 +117,22 @@
 										<span>vers la droite</span>
 										<input type="radio" name="or"ng-model="dir" value="to right"><br/>
 										<label>couleur de debut: {{dcolor}}</label>
-										<input type="color" ng-model="dcolor" ng-init="dcolor='#9f23d4'" />
+										<input class="color" type="text" ng-model="dcolor" ng-init="dcolor='#9f23d4'" />
 										<label>couleur de fin: {{fcolor}}</label>
-										<input type="color" ng-model="fcolor" ng-init="fcolor='#2a3c5f'" />
+										<input class="color" type="text" ng-model="fcolor" ng-init="fcolor='#2a3c5f'" />
 								</form>
 							</td>
 							<td>
 									<div class="exemple" id="exemple3" style="background-image:linear-gradient({{dir}}, {{dcolor}}, {{fcolor}});" ></div>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2" ><p>récuperez le code ici:</p>
+								<code>
+									.exemple{<br/>
+										background-image:linear-gradient({{dir}}, {{dcolor}}, {{fcolor}});"<br/>
+									}
+								</code>
 							</td>
 						</tr>
 					</table>
@@ -134,5 +146,6 @@
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
 		<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
 		<script src="perso.js" ></script>
+		<script src='spectrum.js'></script>
 	</body>
 </html>

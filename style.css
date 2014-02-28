@@ -52,3 +52,7 @@ code{
 input[type="radio"]{
 	width: 20px;
 }
+td[colspan="2"]{
+	padding: 3%;
+	text-decoration: bold;
+}
