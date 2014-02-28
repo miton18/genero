@@ -1,3 +1,15 @@
+var App = angular.module('App', []);
+App.controller('couleur', function ($scope) {
+	
+});
+
+
+
+
+
+
+
+
 $(document).ready(function() {
 
     $( "#tabs" ).tabs();

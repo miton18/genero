@@ -1,4 +1,4 @@
-<html ng-app>
+<html ng-app="App">
 	<head>
 		<title># GENERO #</title>
 		<link rel="stylesheet" type="text/css" href="style.css" />
@@ -12,7 +12,7 @@
 		<header>
 			<p>GENERO: Générateur de petits trucs CSS bien pratique...</p>
 		</header>
-		<div id="tabs">
+		<div id="tabs" ng-controller="couleur">
 			<ul>
 				<li><a href="#tabs-1">Box-shadow</a></li>
 				<li><a href="#tabs-2">Text-shadow</a></li>
