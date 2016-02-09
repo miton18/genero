@@ -4,6 +4,6 @@ généro est un outil de developpement ...en developpement
 
 createur: Rémi Collignon 
 
-voir en action: http://rcdinfo.fr/genero
+voir en action: http://miton18.github.io/genero
 
 #########################################################
